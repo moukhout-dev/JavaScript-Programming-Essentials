@@ -11,7 +11,6 @@ let isAuthenticated = true;
 let authenticationStatus = isAuthenticated ? "Authenticated" : "Not authenticated";
 
 
-
 if (userRole === "admin") {
     accessLevel = "Full access granted";
 } else if (userRole === "manager") {
@@ -49,3 +48,23 @@ switch (userType) {
 console.log("User Category:", userCategory);
 
 console.log("Authentication Status:", authenticationStatus);
+
+let orgRole = prompt("Enter your role:");
+let DiateryServices;
+
+if (orgRole === "Employee"){
+    DiateryServices = "Access Granted";
+    console.log("access to Dieatery services granted")
+} else if (orgRole === "Enrolled Member") {
+    DiateryServices = "Access Granted + 121";
+    console.log("access to Dieatery services + 121 with a dietician granted")
+} else if (orgRole === "Subscriber"){
+    DiateryServices = "Partial Access Granted";
+    console.log("you have partial access to Diatery Services")
+}else if (orgRole === "Non-Subscriber"){
+    DiateryServices = "Access rejected"
+    console.log("please enroll or subscrive first")
+} else {
+    DiateryServices = "Access rejected"
+    console.log("please register, enroll or subscrive first")
+}

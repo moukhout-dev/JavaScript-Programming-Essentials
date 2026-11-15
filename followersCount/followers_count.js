@@ -5,6 +5,11 @@ function increaseCount() {
     displayCount(); // Display the count
     checkCountValue(); // Check count value and display messages
 }
+function resetCount() {
+    count = 0; // Increment the count by 1
+    document.getElementById('countDisplay').innerHTML = count; // Display the count in the HTML
+    alert("Your folloers count has been reset!")
+}
 
 function checkCountValue() {
   if (count === 10) {
